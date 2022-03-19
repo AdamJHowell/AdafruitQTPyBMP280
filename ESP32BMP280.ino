@@ -48,8 +48,8 @@ void setup()
 {
 	// Start the Serial communication to send messages to the computer.
 	Serial.begin( 115200 );
-	while ( !Serial )
-		delay( 100 );
+	if( !Serial )
+		delay( 1000 );
 	Wire.setPins( SDA1, SCL1 );
 	Wire.begin();
 
